@@ -1,0 +1,29 @@
+{
+    "@context": "http://schema.org/",
+    "@type": "PublicationIssue",
+    "identifier": "BUNI00017401",
+    "name": "『放送研究と調査』2024年1月号",
+    "datePublished": "2024-01-01",
+    "thumbnailUrl": "https://www.nhk.or.jp/bunken/book/monthly/img/202401.gif",
+    "issueNumber": 202401,
+    "isPartOf": {
+      "@type": "CreativeWorkSeries",
+      "identifier": "BUNS0001",
+      "name": "放送研究と調査"
+    },
+    "hasPart": [
+      {
+        "@type": "Article",
+        "identifier": "BUNA0001740101",
+        "name": "「推し」とメディア利用",
+        "url": "/book/monthly/BUNA0001740101"
+      },
+      {
+        "@type": "Article",
+        "identifier": "BUNA0001740102",
+        "name": "能登半島地震から5か月",
+        "url": "/book/monthly/BUNA0001740102"
+      }
+    ]
+  }
+  

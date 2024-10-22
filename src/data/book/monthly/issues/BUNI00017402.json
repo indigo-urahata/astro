@@ -1,0 +1,30 @@
+{
+    "@context": "http://schema.org/",
+    "@type": "PublicationIssue",
+    "identifier": "BUNI00017402",
+    "name": "『放送研究と調査』2024年2月号",
+    "datePublished": "2024-02-01",
+    "thumbnailUrl": "https://www.nhk.or.jp/bunken/book/monthly/img/202402.gif",
+    "issueNumber": 202402,
+    "isPartOf": {
+      "@type": "CreativeWorkSeries",
+      "identifier": "BUNS0001",
+      "name": "放送研究と調査"
+    },
+    "hasPart": [
+      {
+        "@type": "Article",
+        "identifier": "20241001_7",
+        "name": "公式サイトと同じ記事ページURI",
+        "url": "/research/yoron/20241001_7"
+      },
+      {
+        "@type": "Article",
+        "identifier": "20241001_7",
+        "name": "/book/monthly配下",
+        "url": "/book/monthly/20241001_7"
+      }
+      
+    ]
+  }
+  

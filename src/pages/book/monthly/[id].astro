@@ -1,0 +1,85 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { Astro } from 'astro';
+
+const { id } = Astro.params;
+
+// データディレクトリのパスを設定
+const dataDir = new URL('../../../data/book/monthly', import.meta.url).pathname;
+
+// 号のデータを読み込む
+let issueData = null;
+let articleData = null;
+let isIssuePage = false;
+let isArticlePage = false;
+
+try {
+  issueData = await import(`../../../data/book/monthly/issues/${id}.json`);
+  isIssuePage = true;
+} catch {
+  // 記事のデータを読み込む
+  try {
+    articleData = await import(`../../../data/book/monthly/articles/${id}.json`);
+    isArticlePage = true;
+  } catch {
+    // どちらも存在しない場合、404ページを表示
+    throw Astro.redirect('/404');
+  }
+}
+
+// getStaticPaths 関数をエクスポート
+export async function getStaticPaths() {
+  // 必要なモジュールを関数内でインポート
+  const fs = await import('fs/promises');
+  const path = await import('path');
+
+  // データディレクトリのパスを再度定義
+  const dataDir = new URL('../../../data/book/monthly', import.meta.url).pathname;
+  const issueDir = path.join(dataDir, 'issues');
+  const articleDir = path.join(dataDir, 'articles');
+
+  // 号のファイル名一覧を取得
+  const issueFiles = await fs.readdir(issueDir);
+  const issueIds = issueFiles
+    .filter((file) => file.endsWith('.json'))
+    .map((file) => file.replace('.json', ''));
+
+  // 記事のファイル名一覧を取得
+  const articleFiles = await fs.readdir(articleDir);
+  const articleIds = articleFiles
+    .filter((file) => file.endsWith('.json'))
+    .map((file) => file.replace('.json', ''));
+
+  // パスの一覧を作成
+  const paths = [...issueIds, ...articleIds].map((id) => ({ params: { id } }));
+
+  return paths;
+}
+---
+
+{isIssuePage && (
+  <Layout title={issueData.name}>
+    <h1 class="text-2xl font-bold mb-4">{issueData.name}</h1>
+    <ul class="list-disc pl-5">
+      {issueData.hasPart.map((article) => (
+        <li class="mb-2">
+          <a href={`/book/monthly/${article.identifier}`} class="text-blue-500 hover:underline">
+            {article.name}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </Layout>
+)}
+
+{isArticlePage && (
+  <Layout title={articleData.name}>
+    <h1 class="text-2xl font-bold mb-4">{articleData.name}</h1>
+    <p class="mb-4">{articleData.description}</p>
+    <div class="space-y-4">
+      {articleData.content.split('\n').map((line) => (
+        <p>{line}</p>
+      ))}
+    </div>
+  </Layout>
+)}

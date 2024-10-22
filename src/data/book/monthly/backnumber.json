@@ -1,0 +1,86 @@
+{
+    "@context": "http://schema.org/",
+    "@type": "CreativeWorkSeries",
+    "identifier": "BUNS0001",
+    "name": "バックナンバー",
+    "description": "",
+    "publisher": "NHK放送文化研究所",
+    "startDate": "",
+    "endDate": "",
+    "hasPart": [
+      {
+        "@type": "PublicationIssue",
+        "identifier": "BUNI00017401",
+        "name": "『放送研究と調査』2024年1月号",
+        "issueNumber": 202401,
+        "datePublished": "2024-01-01",
+        "thumbnailUrl": "https://www.nhk.or.jp/bunken/book/monthly/img/202401.gif"
+      },
+      {
+        "@type": "PublicationIssue",
+        "identifier": "BUNI00017402",
+        "name": "『放送研究と調査』2024年2月号",
+        "issueNumber": 202402,
+        "datePublished": "2024-02-01",
+        "thumbnailUrl": "https://www.nhk.or.jp/bunken/book/monthly/img/202402.gif"
+      },
+      {
+        "@type": "PublicationIssue",
+        "identifier": "BUNI00017401",
+        "name": "『放送研究と調査』2024年3月号",
+        "issueNumber": 202401,
+        "datePublished": "2024-01-01",
+        "thumbnailUrl": "https://www.nhk.or.jp/bunken/book/monthly/img/202403.gif"
+      },
+      {
+        "@type": "PublicationIssue",
+        "identifier": "BUNI00017401",
+        "name": "『放送研究と調査』2024年4月号",
+        "issueNumber": 202401,
+        "datePublished": "2024-01-01",
+        "thumbnailUrl": "https://www.nhk.or.jp/bunken/book/monthly/img/202404.gif"
+      },
+      {
+        "@type": "PublicationIssue",
+        "identifier": "BUNI00017401",
+        "name": "『放送研究と調査』2024年5月号",
+        "issueNumber": 202401,
+        "datePublished": "2024-01-01",
+        "thumbnailUrl": "https://www.nhk.or.jp/bunken/book/monthly/img/202405.gif"
+      },
+      {
+        "@type": "PublicationIssue",
+        "identifier": "BUNI00017401",
+        "name": "『放送研究と調査』2024年6月号",
+        "issueNumber": 202401,
+        "datePublished": "2024-01-01",
+        "thumbnailUrl": "https://www.nhk.or.jp/bunken/book/monthly/img/202406.gif"
+      },
+      {
+        "@type": "PublicationIssue",
+        "identifier": "BUNI00017401",
+        "name": "『放送研究と調査』2024年7月号",
+        "issueNumber": 202401,
+        "datePublished": "2024-01-01",
+        "thumbnailUrl": "https://www.nhk.or.jp/bunken/book/monthly/img/202407.gif"
+      },
+    
+      {
+        "@type": "PublicationIssue",
+        "identifier": "BUNI00017401",
+        "name": "『放送研究と調査』2024年9月号",
+        "issueNumber": 202401,
+        "datePublished": "2024-01-01",
+        "thumbnailUrl": "https://www.nhk.or.jp/bunken/book/monthly/img/202409.gif"
+      },
+      {
+        "@type": "PublicationIssue",
+        "identifier": "BUNI00017410",
+        "name": "『放送研究と調査』2024年10月号",
+        "issueNumber": 202401,
+        "datePublished": "2024-01-01",
+        "thumbnailUrl": "https://www.nhk.or.jp/bunken/book/monthly/img/202410.gif"
+      }
+    ]
+  }
+  

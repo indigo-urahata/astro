@@ -1,0 +1,21 @@
+---
+// src/pages/book/monthly/backnumber.astro
+
+import backnumberData from '../../../data/book/monthly/backnumber.json';
+---
+
+<html lang="ja">
+<head>
+  <title>{backnumberData.name}</title>
+</head>
+<body>
+  <h1>{backnumberData.name}</h1>
+  <ul>
+    {backnumberData.hasPart.map(issue => (
+      <li>
+        <a href={`/book/monthly/${issue.identifier}`}>{issue.name}</a>
+      </li>
+    ))}
+  </ul>
+</body>
+</html>
